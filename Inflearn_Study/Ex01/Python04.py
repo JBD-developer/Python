@@ -2,9 +2,9 @@
 # TITLE : Data type
 # CREATE DATE : 2022-01-10
 # CREATOR : J
-# MODIIFIER :
+# MODIFIER :
 # MODIFY DATE
-# VERSIOM : 1.0.0
+# VERSION : 1.0.0
 ###############################
 
 #double quotation

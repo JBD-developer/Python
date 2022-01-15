@@ -2,9 +2,9 @@
 # TITLE : Variable
 # CREATE DATE : 2022-01-09
 # CREATOR : J
-# MODIIFIER :
-# MODIFY DATE
-# VERSIOM : 1.0.0
+# MODIFIER :
+# MODIFY DATE :
+# VERSION : 1.0.0
 ###############################
 
 num1 = 200
