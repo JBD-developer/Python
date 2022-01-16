@@ -2,7 +2,7 @@
 # TITLE : Control Statement
 # CREATE DATE : 2022-01-11
 # CREATOR : J
-# MODIIFIER : J
+# MODIFIER : J
 # MODIFY DATE : 2022-01-16
 # VERSION : 1.0.0
 ###############################
