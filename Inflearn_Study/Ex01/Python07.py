@@ -3,9 +3,10 @@
 # CREATE DATE : 2022-01-11
 # CREATOR : J
 # MODIFIER : J
-# MODIFY DATE : 2022-01-17
+# MODIFY DATE : 2022-01-21
 # VERSION : 1.0.0
 ###############################
+import turtle
 
 for x in range(10):
     print("Hello Python")
@@ -61,6 +62,7 @@ for x in range(101):
         break
     total2 += x
 
+
 # Factorial
 fact = 1.0
 numY = int(input("Enter the integer\n"))
@@ -72,6 +74,7 @@ print (numY, "Factorial :", fact)
 n1 = 1
 n2 = 1
 n3 = 1
+
 fibonacci = int(input("Enmter the Fibonacci \n" ))
 for i in range(1, fibonacci):
     if i < 3:
@@ -89,3 +92,49 @@ for i in range(1, fibonacci):
 for t in range(0, 101, 10):
     c = (t - 32) * 5.0 / 9.0
     print(t, ":\t ", round(c, 2))
+
+
+# multiplication table
+
+for i in range(1, 10):
+    print(2,  "*", i, "=",(2 * i))
+
+for i in range (2, 10):
+    for j in range (1, 10):
+        print(i, "*",j, "=", (i*j))
+
+
+numX = int(input("Enter the integer\n"))
+numY = int(input("Enter the integer\n"))
+count = 0 ;
+for i in range(numX, numY+1):
+    if (i % 3 == 0) and (i % 4 == 0):
+        continue
+    count += 1
+    print(count, "count :" , i)
+
+
+p = turtle.Pen()
+
+for i in range(50):
+    p.forward(50)
+    p.right(144)
+
+for i in range(10):
+    p.left(20)
+
+    p.forward(50)
+    p.left(90)
+    p.forward(50)
+    p.left(90)
+    p.forward(50)
+    p.left(90)
+    p.forward(50)
+    p.left(90)
+    p.forward(50)
+    p.left(90)
+    p.forward(50)
+    p.left(90)
+
+
+turtle.exitonclick()
