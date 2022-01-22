@@ -274,25 +274,86 @@ print("------------------------------")
 #         print("Exit")
 #         break
 #     numTotal += int(numPrice)
+#
+# numSpeed = 0
+# bRun = True
+# Keycode = 0
+# while bRun:
+#     Keycode = int(input("Select : 1: Increase 2 : Decrease 3: Stop "))
+#     if Keycode == 1:
+#         numSpeed += 10
+#         print("Increase current \n speed %d:" % numSpeed)
+#     elif Keycode == 2:
+#         numSpeed -= 10
+#         if numSpeed < 0:
+#             print("Speed is not negative number")
+#             numSpeed = 0
+#         else:
+#             print("Decrease current \n speed %d:" % numSpeed)
+#     elif Keycode == 3:
+#         bRun = False
+#         print("Stop current speed %d" % numSpeed )
+#         break
+#     else :
+#         print("Error")
+#
 
-numSpeed = 0
-bRun = True
-Keycode = 0
-while bRun:
-    Keycode = int(input("Select : 1: Increase 2 : Decrease 3: Stop "))
-    if Keycode == 1:
-        numSpeed += 10
-        print("Increase current \n speed %d:" % numSpeed)
-    elif Keycode == 2:
-        numSpeed -= 10
-        if numSpeed < 0:
-            print("Speed is not negative number")
-            numSpeed = 0
-        else:
-            print("Decrease current \n speed %d:" % numSpeed)
-    elif Keycode == 3:
-        bRun = False
-        print("Stop current speed %d" % numSpeed )
-        break
-    else :
-        print("Error")
+# Nested loop
+for x in range(5):
+    for y in range(10):
+        print("*", end="")
+    print("")
+
+for x in range(1, 6):
+    for y in range(1, 6):
+        if y <= x :
+            print("*", end="")
+    print("")
+
+for i in range(5):
+    for j in range(i+1):
+        print("*", end="")
+    print("")
+
+print("Integer value : {} , string {} , float {}".format(10, "Ten", 10.0))
+print("Integer value : {0} , string {1} , float {2}".format(10, "Ten", 10.0))
+print("Integer '{:>5d}'".format(300))
+print("Integer '{:<5d}'".format(400))
+
+#
+for i in range(5, 0, -1):
+    for j in range(i):
+        print("*", end="")
+    print("")
+
+for i in range(6, 0 , -1):
+    print("{:<5}".format("*" * (i-1)))
+
+for i in range(1, 6):
+    for j in range (5 - i):
+        print(" ", end ="")
+    for j in range (1, i*2):
+        print("*", end="")
+    print("")
+
+for i in range(1, 11, 2):
+    print("{:^10}".format("*" * i))
+
+for i in range(5):
+    for j in range (i):
+        print(" ", end="")
+    for j in range(10, (i*2) + 1, -1):
+        print("*", end ="")
+    print("")
+
+numLast = 0
+numTotal = 0
+
+for i in range(2, 2001):
+    for j in range (2, i+1):
+        if i % j == 0:
+            break
+    if i == j :
+        print("prime :" , j)
+        numTotal += j
+        print("total", numTotal)
