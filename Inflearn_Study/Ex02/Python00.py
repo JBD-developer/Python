@@ -8,6 +8,8 @@
 ###############################
 
 # Ex02. Python01
+import math
+import random
 def lf_say(name, message):
     for i in range(1, 5):
         print("Hello", name, message)
@@ -81,4 +83,66 @@ def calc_mul(x, y):
     return x * y
 
 
+def print_info(name, age):
+    print("------------")
+    print("Name %s" % name)
+    print("Age %s" % age )
+    print("------------")
+    return
+
+
+def print_info02(name, message = "Hi"):
+    print("Hello" + name + "," + message)
+    return
+
+
+def print_info03(name, age, address):
+    print("------------")
+    print("Name %s" % name)
+    print("Age %s" % age)
+    print("Address %s" % address)
+    print("------------")
+
+
+def sphere_volume(x):
+    result = (4 / 3) * math.pi * math.pow(x, 3)
+    return result
+
+
+def create_password1():
+    num_str = "0123456789"
+    password = ""
+
+    for i in range(6):
+        index = random.randrange(len(num_str))
+        password = password + num_str[index]
+    return password
+
+
+def create_password2():
+    password = ""
+
+    for i in range(6):
+        index = random.randrange(0 ,9)
+        password = password + str(index)
+    return password
+
+
+def decimal_to_binary(x):
+    binary = ""
+    reminder = 0
+
+def decimal_to_binary2(x):
+    binary = ""
+    while x != 0:
+        value = x % 2
+        if value == 0:
+            binary = "0" +binary
+        else :
+            binary = "1" +binary
+
+        x = x // 2
+        print("num : ", x)
+    return binary
 # Ex02. Python02
+
