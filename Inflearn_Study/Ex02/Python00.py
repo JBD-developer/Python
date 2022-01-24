@@ -3,7 +3,7 @@
 # CREATE DATE : 2022-01-23
 # CREATOR : J
 # MODIFIER : J
-# MODIFY DATE :
+# MODIFY DATE : 2022-01-24
 # VERSION : 1.0.0
 ###############################
 
@@ -144,5 +144,6 @@ def decimal_to_binary2(x):
         x = x // 2
         print("num : ", x)
     return binary
+
 # Ex02. Python02
 
