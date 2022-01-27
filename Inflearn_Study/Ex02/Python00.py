@@ -3,7 +3,7 @@
 # CREATE DATE : 2022-01-23
 # CREATOR : J
 # MODIFIER : J
-# MODIFY DATE : 2022-01-24
+# MODIFY DATE : 2022-01-28
 # VERSION : 1.0.0
 ###############################
 
@@ -132,6 +132,7 @@ def decimal_to_binary(x):
     binary = ""
     reminder = 0
 
+
 def decimal_to_binary2(x):
     binary = ""
     while x != 0:
@@ -145,5 +146,51 @@ def decimal_to_binary2(x):
         print("num : ", x)
     return binary
 
-# Ex02. Python02
 
+# Ex02. Python02
+# Ex02. Python03
+
+def fib(n):
+    n1 = 0
+    n2 = 1
+    n3 = n1 + n2
+    while n3 < n:
+        print(n3, end=" ")
+        n3 = n1 + n2
+        n1 = n2
+        n2 = n3
+
+
+def sum(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    return sum
+
+
+def grade_read_list():
+    scorelist = []
+    flag = True
+
+    while flag:
+        score = int(input("Enter the score:\n"));
+        if score < 0 :
+            flag = False
+            print("Loop exit")
+            break;
+        else :
+            scorelist.append(score)
+
+    return scorelist
+
+
+def grade_sort_list(list):
+    list.sort()
+    return list
+
+
+def grade_print_list(list):
+    j = 0
+    for i in list:
+        print((j+1),":", i)
+        j+=1

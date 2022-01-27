@@ -3,10 +3,11 @@
 # CREATE DATE : 2022-01-26
 # CREATOR : J
 # MODIFIER : J
-# MODIFY DATE :
+# MODIFY DATE : 2021-01-28
 # VERSION : 1.0.0
 ###############################
 import math
+import Python00
 from math import *
 
 
@@ -68,3 +69,22 @@ main()
 
 for f in li :
     print("labbda :" , f(10))
+
+
+# __name__
+
+Python00.fib(10)
+print()
+print(Python00.sum(10))
+print(Python00.__name__)
+print(__name__)
+
+
+def main():
+    list = Python00.grade_read_list()
+    list = Python00.grade_sort_list(list)
+    Python00.grade_print_list(list)
+
+
+if __name__ == "__main__":
+    main()
