@@ -17,7 +17,6 @@ score_list.append("Python")
 print("append scorelist  value string :", score_list)
 score_list.append(3.141592)
 print("append scorelist  value float :", score_list)
-
 print("scorelist length :", len(score_list))
 
 score_list[0] = 35
@@ -62,23 +61,68 @@ score_avg = 0.0
 score_list = []
 score_total = 0
 
-for i in range(4):
-    score = int(input("Enter the score\n"))
-    score_total += score
-    score_list.append(score)
-    if score_list[i] >= 80:
-        score_80_count += 1
+# for i in range(4):
+#     score = int(input("Enter the score\n"))
+#     score_total += score
+#     score_list.append(score)
+#     if score_list[i] >= 80:
+#         score_80_count += 1
+#
+# score_avg = score_total // len(score_list)
+# print("Top ", score_80_count)
+# print("Avg ", score_avg)
+# print(score_list)
+#
+# dog_list = []
+# while True:
+#     dog_name = input("Enter the dog name : \n")
+#     if dog_name == "":
+#         break
+#     print(dog_name)
+#     dog_list.append(dog_name)
+# print(dog_list)
 
-score_avg = score_total // len(score_list)
-print("Top ", score_80_count)
-print("Avg ", score_avg)
-print(score_list)
 
-dog_list = []
-while True:
-    dog_name = input("Enter the dog name : \n")
-    if dog_name == "":
-        break
-    print(dog_name)
-    dog_list.append(dog_name)
-print(dog_list)
+# indexing slicing
+
+letter = ["Banana", "Apple", "Orange", "Strawberry", "Blackberry"]
+print("letter length :", len(letter))
+print("letter[-1] :" , letter[-1])
+print("letter slicing :", letter[3:])
+
+words = "Hello Python"
+print(words[0], words[4], words[-1])
+
+fruit = ["Paach", "Tomato", "Melon", "Grape"]
+
+li1 = [1, 2]
+li2 = [3, 4]
+li3 = li1 + li2
+print(id(li1))
+print(id(li2))
+print(id(li3))
+print(li3)
+
+print(["Python"] * 3)
+
+print("Java" in ["Python", "C#", "Java"])
+print("Ruby" in ["Python", "C#", "Java"])
+
+li04 = [1, -1, 2, 145, 0, 0.1]
+print(max(li04))
+print(min(li04))
+li05 = ['a', 'b', 'c', 'd']
+print(max((li05)))
+
+language = ["Python", "Java", "C#", "JavaScript", "Ruby", "R"]
+
+print(language[-2])
+print(language[-1])
+language2 = language[0:-1]
+print(language2)
+print(language2[:])
+
+words = ["a", "b", "c", "d", "e", "f"]
+print(words)
+words[1:3] = ["B", "C", "D", "E"]
+print(words)
