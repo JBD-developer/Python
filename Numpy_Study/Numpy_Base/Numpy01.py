@@ -15,7 +15,7 @@ print(arr)
 print(type(arr))
 
 dataone = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-dataTwo = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+datatwo = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
 
 for i in range(len(dataone)):
     for j in range(len(dataone[0])):
@@ -24,8 +24,28 @@ print(dataone)
 
 for i in range(len(dataone)):
     for j in range(len(dataone[i])):
-        dataone[i][j] += dataTwo[i][j]
+        dataone[i][j] += datatwo[i][j]
 print(dataone)
 
+
+# dataone = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# datatwo = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+
+print("=================")
+arrone = np.array(dataone)
+arrtwo = np.array(datatwo)
+
+print(arrone)
+print(arrtwo)
+print(type(arrone))
+print(type(arrtwo))
+
+print("=================")
+# print(arrone * 2)
+# print(arrone + arrone)
+# print(arrone + arrtwo)
+# print(arrone - arrtwo)
+# print(arrone / arrtwo)
+print(np.dot(arrone, arrtwo))
 
 
