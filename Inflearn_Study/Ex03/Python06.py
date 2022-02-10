@@ -130,3 +130,90 @@ string =  "     aaaa     bbbb  cccccc      "
 print(string.lstrip())
 print(string.rstrip())
 print(string.strip())
+
+# palindrome
+# string = input("Enter the string")
+#
+# result = ""
+# for i in range(len(string)):
+#     result = string[i] + result
+#     print(result)
+#
+# if result == string:
+#     print("palindrome")
+# else:
+#     print("Not palindrome")
+#
+
+def check(s):
+    low = 0
+    high = len(s)-1
+
+    while True:
+
+        if low > high:
+            return True
+
+        s1 = s[low]
+        s2 = s[high]
+        print(s1, s2)
+        if s1 != s2 :
+            return False
+
+        low += 1
+        high -= 1
+
+
+def check_count(s):
+
+    dic_count = {"digits": 0, "spaces": 0, "alpha": 0}
+
+    for i in range(len(s)):
+        word = s[i]
+        print(word)
+
+        if word.isalpha():
+            dic_count["alpha"] += 1
+        elif word.isdigit():
+            dic_count["digits"] += 1
+        elif word.isspace():
+            dic_count["spaces"] +=1
+
+    print(dic_count)
+
+
+def check_acronym():
+    string  = input("Enter the word")
+    acronym = ""
+    for word in string.upper().split():
+        acronym += word[0]
+
+    print("acronym : ", acronym)
+
+def check_csv():
+
+    fp = open("E:\\workSpace_Etc\\Test1.csv", mode="r", encoding="UTF-8")
+
+    for line in fp.readlines():
+        line = line.strip()
+        print(type(line))
+
+
+        words = line.split(",")
+        for word in words :
+            print(word, " ")
+    fp.close()
+
+
+if __name__ == "__main__":
+    # st = input("Enter the string")
+    # st = st.replace(" ", "")
+    #
+    # if check(st) == True:
+    #     print("palindrome")
+    # else:
+    #     print("Not palindrome")
+    #st = input("Enter the string")
+    #check_count(st)
+    check_acronym()
+    check_csv()
