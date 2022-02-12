@@ -12,7 +12,6 @@
 from collections import OrderedDict
 
 # OrderDict
-from bokeh.colors.groups import orange
 
 dic1 = {}
 
