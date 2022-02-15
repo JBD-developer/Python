@@ -1,6 +1,6 @@
 ###############################
 # TITLE : OOP Object-Oriented Programming
-# CREATE DATE : 2022-02-14
+# CREATE DATE : 2022-02-15
 # CREATOR : J
 # MODIFIER : J
 # MODIFY DATE :
@@ -46,25 +46,33 @@ class Car:
 
 
 class Television:
+    company = ""
     color = ""
     power = False
-    channel = 0
+    channel = 10
     volume = 0
 
-    def set_power(self, power):
-        self.power = not power
+    def set_power(self, power, company):
+        if power == True:
+            self.power = False
+            print("{} Off".format(company))
+        else:
+            self.power = True
+            print("{} Off".format(company))
 
     def up_channel(self, channel):
         if channel < 0:
             print("Error")
             return
-        self.channel = channel
+        self.channel += channel
+        print("{} up result {}".format(channel, self.channel))
 
     def down_channel(self, channel):
         if channel < 0:
             print("Error")
             return
-        self.channel = channel
+        self.channel -= channel
+        print("{} down result {}".format(channel, self.channel))
 
     def up_volume(self, volume):
         if volume < 0:
@@ -78,11 +86,11 @@ class Television:
             return
         self.volume = volume
 
-    def __str__(self):
-        print(self.color)
-        print(self.channel)
-        print(self.volume)
-        print(self.power)
+    def __str__(self, company):
+        print("{} - color : {} ".format(company, self.color))
+        print("{} - channel :{} ".format(company, self.channel))
+        print("{} - volume : {} ".format(company, self.volume))
+        print("{} - power : {} ".format(company, self.power))
 
 
 if __name__ == "__main__":
@@ -106,10 +114,12 @@ if __name__ == "__main__":
     # myCar2.print_carInfo(myCar2.name)
 
     luckyGold = Television()
-
+    luckyGold.company = "luckyGold"
     luckyGold.color = "Black"
     luckyGold.volume = 50
     luckyGold.channel = 5
     luckyGold.power = True
-
-    luckyGold.__str__()
+    luckyGold.__str__(luckyGold.company)
+    luckyGold.set_power(False, luckyGold.company)
+    luckyGold.up_channel(5)
+    luckyGold.down_channel(2)
