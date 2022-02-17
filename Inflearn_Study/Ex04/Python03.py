@@ -1,9 +1,9 @@
 ###############################
 # TITLE : OOP Object-Oriented Programming constructor
-# CREATE DATE : 2022-02-16
+# CREATE DATE : 2022-02-17
 # CREATOR : J
 # MODIFIER : J
-# MODIFY DATE :
+# MODIFY DATE : 2022-02-18
 # VERSION : 1.0.0
 ###############################
 
@@ -13,6 +13,9 @@ class element
  -member method
  -constructor
 """
+from networkx import radius
+
+
 class Moniter :
     # field
     __company = ""
@@ -88,6 +91,49 @@ class Person:
         print(self.age)
         print(self.address)
 
+import math
+
+
+class Cicle:
+    __radius = 0
+
+    def __init__(self, radius):
+        self.__radius = radius
+
+    def get_radius(self):
+        return self.__radius
+
+    def set_radius(self, radius):
+        self.__radius = radius
+
+    def circle_area(self):
+        area = self.__radius * self.__radius * math.pi
+        return area
+
+    def circle_circumference(self):
+        circum = self.__radius * 2 * math.pi
+        return circum
+
+    def __str__(self):
+        print("Radius : {}", format(self.radius))
+
+class BankAccount:
+    __balance = 0
+
+    def get_balance(self):
+        return self.__balance
+
+    def set_deposit(self, mount):
+        self.__balance += mount
+
+    def set_withdraw(self, mount):
+        if self.__balance < mount:
+            print("Error")
+        else:
+            self.__balance -= mount
+
+    def __str__(self):
+        print(self.__balance)
 
 if __name__ == "__main__":
     # person1 = Person()
@@ -109,3 +155,17 @@ if __name__ == "__main__":
     moniter1.set_price(15000000)
     print("="*20)
     moniter1.__str__()
+    print("="*20)
+
+
+    circle = Cicle(10)
+    print(circle.get_radius())
+    print(circle.circle_circumference())
+    print(circle.circle_area())
+
+    print("=" * 20)
+    myaccount = BankAccount()
+    myaccount.set_deposit(100000)
+    myaccount.__str__()
+    myaccount.set_withdraw(1000)
+    myaccount.__str__()
