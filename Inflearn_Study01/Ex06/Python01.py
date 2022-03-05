@@ -70,7 +70,7 @@ with open("E:\\workSpace_Etc\\TextFile\\input.txt", "a") as file:
 
 sales_num = []
 total_num = 0
-with open("Ex06_File\\sales.txt", "r") as file:
+with open("Ex06_File/test01.txt", "r") as file:
 
     line = file.readline().rstrip()
 
